@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/upload.css">
+  <title>index</title>
+</head>
+
+<body>
+  <div class="container">
+    <div style="border: #1100ff; border-style: solid; border-width: 2px;" class="card">
+      <h3 class="custom">Upload Files</h3>
+      <div class="drop_box">
+        <header>
+          <h4 style="font-size: 15px; font-weight: bold; color: rgb(19, 59, 0);">Select File here</h4>
+        </header>
+        <b><p style="color: #010101; font-size: 20px;">Files Supported: JPEG, PNG</p></b>
+        <input type="file" hidden accept=".doc,.docx,.pdf" id="fileID" style="display:none;">
+        <button class="btn">Choose File</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    const dropArea = document.querySelector(".drop_box"),
+      button = dropArea.querySelector("button"),
+      dragText = dropArea.querySelector("header"),
+      input = dropArea.querySelector("input");
+    let file;
+    var filename;
+    button.onclick = () => {
+      input.click();
+    };
+    input.addEventListener("change", function(e) {
+      var fileName = e.target.files[0].name;
+      let filedata = `
+    <form action="" method="post">
+    <div class="form">
+    <h4>${fileName}</h4>
+    <input type="email" placeholder="Enter email upload file">
+    <button class="btn">Upload</button>
+    </div>
+    </form>`;
+      dropArea.innerHTML = filedata;
+    });
+  </script>
+</body>
+</html>

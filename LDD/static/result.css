@@ -1,0 +1,26 @@
+body{
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/707/220/899/gradient-blue-pink-abstract-art-wallpaper-preview.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.container{
+    height: auto;
+    width: auto ;
+    align-items: center;
+    display: flex ;
+    align-self: center;
+    justify-content: center;  
+}
+.contains{
+    font-family: 'Montserrat';
+    border-radius: 15px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+    width: auto; /* Set a fixed width */
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.425); 
+    padding: 10px 30px 40px;
+}
+.contains p{
+    font-size: 20px;
+}
